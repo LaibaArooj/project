@@ -31,10 +31,27 @@ public:
             if(payee != payer){
                 balances[payee] -= share;
             }
+
+        }}
+        void displayBalance() const {
+        for (const auto &pair : balances) {
+            if (pair.second > 0) {
+                cout << pair.first << " needs to collect " << pair.second << " from others." << endl;
+            } else if (pair.second < 0) {
+                cout << pair.first << " needs to pay " << -pair.second << " to others." << endl;
+            } else {
+                cout << pair.first << " has no balance." << endl;
+            }
+
         }
     }
     };
 int main(){
+
+cout<<"";
+cout << "Final Balances:"<<endl;
+    splitter.displayBalance();
+
 BillSplitter splitter;
    cout<<"";
     int numFriends;
@@ -74,5 +91,6 @@ BillSplitter splitter;
         cin.ignore();
         splitter.addExpense(payer, payees, amount);
     }
+
 return 0;
 }
