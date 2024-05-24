@@ -1,9 +1,9 @@
 #include<iostream>
-using namespace std;
+
 #include <unordered_map>
 #include <string>
 #include <vector>
-
+using namespace std;
 class BillSplitter {
 private:
     unordered_map<string, double> balances;
