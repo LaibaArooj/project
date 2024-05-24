@@ -48,9 +48,7 @@ public:
     };
 int main(){
 
-cout<<"";
-cout << "Final Balances:"<<endl;
-    splitter.displayBalance();
+
 
 BillSplitter splitter;
    cout<<"";
@@ -91,6 +89,8 @@ BillSplitter splitter;
         cin.ignore();
         splitter.addExpense(payer, payees, amount);
     }
-
+cout<<"";
+cout << "Final Balances:"<<endl;
+    splitter.displayBalance();
 return 0;
 }
